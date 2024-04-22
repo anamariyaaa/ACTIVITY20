@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title {
+    text-align: center;
+    padding: 20px;
+}
+.title h1 {
+    font-family: "Madimi One", sans-serif;
+    font-size: 55px;
+    color: #ffffff;
+    text-shadow: 9px 0 8px rgb(255, 68, 162);
+}
+
+h1{
+    font-size: 75px;
+    text-shadow: 11px 0 4px rgb(182, 175, 175);
+}
+
+.container {
+    display: flex;
+    width: 1050px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.container .block {
+    width: 150px;
+    height: 210px;
+    transition: all 0.7s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    margin: 0 10px 20px;
+}
+.container .block .front {
+    background-image: url(barbie.jpg);
+    background-size: cover;
+    line-height: 220px;
+    border-radius: 9px;
+    box-shadow: 8px 0 5px rgb(175, 175, 175);
+}
+.container .block .back {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    border-radius: 9px;
+    border: transparent;
+    box-shadow: 8px 0 5px rgb(175, 175, 175);
+}
+.container .block .back h1 {
+    text-align: center;
+    color: #fff;
+}
+.container .block .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+}
+.container .block.flip,
+.container .block.match {
+    transform: rotateY(180deg);
+}
+.container.no-click {
+    pointer-events: none;
+}
